@@ -1,23 +1,32 @@
-import logo from './logo.svg';
+
+import React, {useState} from 'react';
+import ReMap from './ReMap';
 import './App.css';
+import PermanentDrawerLeft from './PermanentDrawerLeft';
+import PermanentDrawerRight from './PermanentDrawerRight';
+import SpeedDial from './SpeedDial';
+import LandingPage from './PopupFenster';
 
 function App() {
-  return (
+  const [isVisible, setIsVisible] = useState(false);
+
+  const handleDrawerOpen = () => {
+    setIsVisible(!isVisible);
+  };
+
+ return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <ReMap/>
+      <div className="mobile-drawer">
+        <PermanentDrawerRight variant="temporary" />
+        <PermanentDrawerLeft variant="temporary" />
+        <LandingPage />
+      </div>
+      <div className="desktop-drawer">
+        <PermanentDrawerRight isVisible={isVisible}/>
+        <PermanentDrawerLeft handleDrawerOpen={handleDrawerOpen}/>
+        <SpeedDial />
+      </div>
     </div>
   );
 }
