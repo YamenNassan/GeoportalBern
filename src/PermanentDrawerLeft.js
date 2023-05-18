@@ -2,13 +2,18 @@ import * as React from 'react';
 import Box from '@mui/material/Box';
 import Drawer from '@mui/material/Drawer';
 import CssBaseline from '@mui/material/CssBaseline';
+import AppBar from '@mui/material/AppBar';
+import Toolbar from '@mui/material/Toolbar';
+import List from '@mui/material/List';
 import Typography from '@mui/material/Typography';
 import Divider from '@mui/material/Divider';
 import Grid from '@mui/material/Grid';
 import Button from '@mui/material/Button';
-import { List } from '@mui/material';
+import PermanentDrawerRight from './PermanentDrawerRight';
 
 
+//import SuchFenster
+import SuchFenster from './SuchFenster';
 //import Icon
 import Bern from './StadtBern';
 

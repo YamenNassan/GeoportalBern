@@ -4,6 +4,14 @@ import Drawer from '@mui/material/Drawer';
 import List from '@mui/material/List';
 import Divider from '@mui/material/Divider';
 import ListItem from '@mui/material/ListItem';
+import ListItemButton from '@mui/material/ListItemButton';
+import ListItemIcon from '@mui/material/ListItemIcon';
+import ListItemText from '@mui/material/ListItemText';
+import InboxIcon from '@mui/icons-material/MoveToInbox';
+import MailIcon from '@mui/icons-material/Mail';
+
+import Grid from '@mui/material/Grid';
+
 import Bern from './StadtBern';
 import CheckboxList from './CheckboxList';
 import { Typography } from '@mui/material';
@@ -11,6 +19,8 @@ import { Typography } from '@mui/material';
 const drawerWidthRight = 350;
 
 function PermanentDrawerRight(props) {
+  
+
   return (
     <Box sx={{ display: 'flex' }}>
       <Drawer
@@ -45,7 +55,7 @@ function PermanentDrawerRight(props) {
           ):(
             <ListItem>
               <Typography variant="body1" sx={{bgcolor:'rgba(70,50,10,0.1)', 
-                          textAlign:'center', fontFamily:'Dancing Script', 
+                          textAlign:'center', fontFamily:'sans-serif', 
                           fontSize:'20px', fontStyle:'#808000'}}>
                 Die Entwicklung der Städte ist von 
                 vielen Faktoren abhängt, wie z.B. der geografischen Lage, 
